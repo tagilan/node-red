@@ -1,0 +1,55 @@
+<script type="text/javascript">
+    RED.nodes.registerType('oracle-db', {
+        category: 'Agiliz nodes',
+        color: '#97CC36',
+        defaults: {
+            user: {
+                value: ""
+            },
+            password: {
+                value: ""
+            },
+            connect: {
+                value: ""
+            },
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "white-globe.png",
+        label: function () {
+            return this.name || "Oracle DB";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="oracle-db">
+
+
+    <div class="form-row">
+            <label for="node-input-user"><i class="icon-tag"></i> User </label>
+            <input type="text" id="node-input-user" placeholder="User">
+    </div>
+        
+    <div class="form-row">
+            <label for="node-input-password"><i class="icon-tag"></i> Password</label>
+            <input type="password" id="node-input-password" placeholder="Password">
+    </div>
+        
+    <div class="form-row">
+            <label for="node-input-connect"><i class="icon-tag"></i> Connect String</label>
+            <input type="text" id="node-input-connect" placeholder="localhost">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+ 
+</script>
+
+<script type="text/x-red" data-help-name="oracle-db">
+    <p>Node to Query Data from Oracle Database</p>
+</script>
