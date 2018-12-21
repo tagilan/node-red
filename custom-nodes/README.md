@@ -1,4 +1,4 @@
-oracledb Oracledb downloaded
+#oracledb Oracledb downloaded
 oracledb
 oracledb ********************************************************************************
 oracledb ** Node-oracledb 3.0.1 installation complete for Node.js 8.11.3 (darwin, x64)
