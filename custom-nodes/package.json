@@ -4,16 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha \"test/**/*_spec.js\""
   },
   "author": "",
   "license": "ISC",
   "node-red": {
     "nodes": {
-      "oracle-db": "src/nodes/node-oracle-db/node-oracle-db.js"
+      "oracle-db": "src/nodes/node-oracle-db/node-oracle-db.js",
+      "lower-case": "src/nodes/lower-case/lower-case.js"
     }
   },
   "dependencies": {
+    "mocha": "^5.2.0",
     "oracledb": "^3.0.1"
+  },
+  "devDependencies": {
+    "node-red": "^0.19.5",
+    "node-red-node-test-helper": "^0.1.8"
   }
 }
