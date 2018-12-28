@@ -27,7 +27,7 @@ module.exports = function(RED) {
       input(node, data, config);
     });
   }
-  RED.nodes.registerType("read-googlesheets", readSheetsNode);
+  RED.nodes.registerType("read-google-sheets", readSheetsNode);
 };
 
 function input(node, data, config) {
