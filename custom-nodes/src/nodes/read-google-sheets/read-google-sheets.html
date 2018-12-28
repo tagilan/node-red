@@ -1,0 +1,33 @@
+<script type="text/javascript">
+  RED.nodes.registerType("read-googlesheets", {
+    category: "Custom Nodes",
+    color: "#229954",
+    defaults: {
+      name: {
+        value: ""
+      },
+      id: {
+        value: ""
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "google.svg",
+    label: function() {
+      return this.name || "Read Google Sheets";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="read-googlesheets">
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+      <label for="node-input-id"><i class="icon-tag"></i> Sheet ID</label>
+      <input type="text" id="node-input-id" placeholder="Sheet ID">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="read-googlesheets"></script>
