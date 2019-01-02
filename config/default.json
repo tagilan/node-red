@@ -1,0 +1,10 @@
+{
+  "node-red": {
+    "ui": {
+      "host": "localhost",
+      "port": 1880
+    },
+    "flowFilename": "Agilan_flows.json",
+    "userDir": "/Users/Chandan/Documents/Agilan/agilan-nod-red/node-red/"
+  }
+}

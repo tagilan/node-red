@@ -1,6 +1,5 @@
 var should = require("should");
 var helper = require("node-red-node-test-helper");
-//Import the required Node
 var lowerNode = require("../src/nodes/lower-case/lower-case.js");
 
 helper.init(require.resolve("node-red"));
@@ -40,4 +39,5 @@ describe("lower-case Node Test suit", () => {
       n1.receive({ payload: "UpperCase" });
     });
   });
+  
 });
