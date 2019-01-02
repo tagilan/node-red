@@ -23,7 +23,7 @@ module.exports = function(RED) {
   function readSheetsNode(config) {
     RED.nodes.createNode(this, config);
     var node = this;
-    node.on("input", data => {
+    node.on("input", (data) => {
       input(node, data, config);
     });
   }

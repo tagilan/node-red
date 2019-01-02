@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"test/**/*_spec.js\""
+    "test": "nyc --reporter=html mocha \"test/**/*_spec.js\""
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "node-red": "^0.19.5",
-    "node-red-node-test-helper": "^0.1.8"
+    "node-red-node-test-helper": "^0.1.8",
+    "nyc": "^13.1.0"
   }
 }
