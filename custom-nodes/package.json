@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html mocha \"test/**/*_spec.js\""
+    "test": "nyc --reporter=html mocha ./test/tests.js"
   },
   "author": "",
   "license": "ISC",
