@@ -12,10 +12,12 @@
     "nodes": {
       "oracle-db": "src/nodes/node-oracle-db/node-oracle-db.js",
       "lower-case": "src/nodes/lower-case/lower-case.js",
-      "read-google-sheets": "src/nodes/read-google-sheets/read-google-sheets.js"
+      "read-google-sheets": "src/nodes/read-google-sheets/read-google-sheets.js",
+      "admin-hash-password": "src/nodes/admin-hash-password/admin-hash-password.js"
     }
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "googleapis": "^36.0.0",
     "mocha": "^5.2.0",
     "oracledb": "^3.0.1",
