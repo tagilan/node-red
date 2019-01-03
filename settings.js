@@ -27,7 +27,7 @@ module.exports = {
     // To listen on all IPv6 addresses, set uiHost to "::",
     // The following property can be used to listen on a specific interface. For
     // example, the following would only allow connections from the local machine.
-    //uiHost: "127.0.0.1",
+    uiHost: config.ui.host,
 
     // Retry time in milliseconds for MQTT connections
     mqttReconnectTime: 15000,
@@ -63,7 +63,7 @@ module.exports = {
     //tlsConfigDisableLocalFiles: true,
 
     // Colourise the console output of the debug node
-    //debugUseColors: true,
+    debugUseColors: true,
 
     // The file containing the flows. If not set, it defaults to flows_<hostname>.json
     flowFile: config.flowFilename,
@@ -219,17 +219,17 @@ module.exports = {
     // provided here will enable file-based context that flushes to disk every 30 seconds.
     // Refer to the documentation for further options: https://nodered.org/docs/api/context/
     //
-    //contextStorage: {
-    //    default: {
-    //        module:"localfilesystem"
-    //    },
-    //},
+    contextStorage: {
+       default: {
+           module:"localfilesystem"
+       },
+    }, 
 
     // The following property can be used to order the categories in the editor
     // palette. If a node's category is not in the list, the category will get
     // added to the end of the palette.
     // If not set, the following default order is used:
-    //paletteCategories: ['subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
+    paletteCategories: config.paletteCategoriesOrder,
 
     // Configure the logging output
     logging: {
