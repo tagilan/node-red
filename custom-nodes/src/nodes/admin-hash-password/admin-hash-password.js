@@ -11,18 +11,16 @@ module.exports = function(RED){
         
         node.on('input', function(msg) {
 
-            var hash = require('bcryptjs').hashSync(config.password, 8)
+            var hash = require('bcryptjs').hashSync(msg.payload, 8)
 
-            if(!config.password){
+            if(!msg.payload){
                 node.status({
                     fill: "red",
                     shape: "dot",
-                    text: "Provide valid Password String"
+                    text: "Provide valid password string in payload"
                 });
                 return false;
             }
-
-            msg.passwordString = config.password;
 
             msg.hashedString = hash;
 
