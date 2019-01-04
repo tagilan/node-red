@@ -34,13 +34,13 @@ describe("Hash password node test suit", () => {
         name: "admin-hash-password",
         wires: [["n2"]]
       },
-      { id: "n2", type: "helper" }
+      { id: "n2", type: "helper", name: "helper-node" }
     ];
 
     helper.load(hashNode, flow, () => {
       var n1 = helper.getNode("n1");
       var n2 = helper.getNode("n2");
-
+      
       n2.on("input", msg => {
         msg.should.have.property("payload", "pa55W0rD");
         msg.should.have.property("hashedString");
