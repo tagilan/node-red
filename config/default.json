@@ -1,7 +1,7 @@
 {
   "node-red": {
     "ui": {
-      "host": "localhost",
+      "host": "127.0.0.1",
       "port": 1883
     },
     "flowFilename": "Agilan_flows.json",

@@ -22,6 +22,7 @@ describe("lower-case Node Test suit", () => {
       n1.should.have.property("name", "lower-case");
       done();
     });
+    
   });
 
   it("Node should make payload lower case", (done) => {

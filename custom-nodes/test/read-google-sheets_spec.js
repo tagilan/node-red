@@ -1,6 +1,7 @@
 var should = require("should");
 var helper = require("node-red-node-test-helper");
 var googlesheets = require("../src/nodes/read-google-sheets/read-google-sheets.js");
+
 helper.init(require.resolve("node-red"));
 
 describe("Read Google Sheets Node Test suit", ()=> {
