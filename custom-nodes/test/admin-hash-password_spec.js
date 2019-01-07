@@ -4,7 +4,9 @@ var hashNode = require("../src/nodes/admin-hash-password/admin-hash-password.js"
 
 helper.init(require.resolve("node-red"));
 
-describe("Hash password node test suit", () => {
+//Test Suite
+describe("Hash password Node test suit", () => {
+ 
   beforeEach(done => {
     helper.startServer(done);
   });
@@ -14,7 +16,8 @@ describe("Hash password node test suit", () => {
     helper.stopServer(done);
   });
 
-  it("Node should be loaded", done => {
+  //#Test case 1
+  it("#admin-hash-password Node should be loaded", done => {
     var flow = [
       { id: "n1", type: "admin-hash-password", name: "admin-hash-password" }
     ];
@@ -24,9 +27,11 @@ describe("Hash password node test suit", () => {
       n1.should.have.property("name", "admin-hash-password");
       done();
     });
+
   });
 
-  it("Node should accept payload", done => {
+  //#Test case 2
+  it("#admin-hash-password Node should accept payload", done => {
     var flow = [
       {
         id: "n1",
@@ -34,13 +39,18 @@ describe("Hash password node test suit", () => {
         name: "admin-hash-password",
         wires: [["n2"]]
       },
-      { id: "n2", type: "helper", name: "helper-node" }
+      {
+        id: "n2",
+        type: "helper",
+        name: "helper-node"
+      }
     ];
 
     helper.load(hashNode, flow, () => {
+    
       var n1 = helper.getNode("n1");
       var n2 = helper.getNode("n2");
-      
+
       n2.on("input", msg => {
         msg.should.have.property("payload", "pa55W0rD");
         msg.should.have.property("hashedString");
@@ -48,6 +58,7 @@ describe("Hash password node test suit", () => {
       });
 
       n1.receive({ payload: "pa55W0rD" });
+      
     });
   });
 });
