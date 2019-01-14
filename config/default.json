@@ -5,7 +5,7 @@
       "port": 1883
     },
     "flowFilename": "Agilan_flows.json",
-    "userDir": "/Users/Chandan/Documents/Agilan/agilan-nod-red/node-red/",
+    "userDir": "/Users/agilan/Documents/node-red",
     "paletteCategoriesOrder": [
       "custom nodes",
       "subflows",
