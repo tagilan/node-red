@@ -1,8 +1,9 @@
- var oracledb = require('oracledb');
 
  module.exports = function (RED) {
 
-     function OracleDB(config) {
+    var oracledb = require('oracledb');
+
+    function OracleDB(config) {
 
          RED.nodes.createNode(this, config);
          var node = this;

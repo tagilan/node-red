@@ -1,7 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('oracle-db', {
-        category: 'Custom nodes',
-        color: '#97CC36',
+        category: 'Database Connection',
+        color: '#229954',
         defaults: {
             user: {
                 value: ""
@@ -39,7 +39,7 @@
     </div>
         
     <div class="form-row">
-            <label for="node-input-connect"><i class="icon-tag"></i> Connect String</label>
+            <label for="node-input-connect"><i class="icon-tag"></i> Connection String</label>
             <input type="text" id="node-input-connect" placeholder="localhost">
     </div>
 
@@ -51,5 +51,5 @@
 </script>
 
 <script type="text/x-red" data-help-name="oracle-db">
-    <p>Node to Query Data from Oracle Database</p>
+    <p>A Node-RED node to read and write to a  Oracle Database</p>
 </script>

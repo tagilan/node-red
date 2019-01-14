@@ -1,0 +1,22 @@
+{
+  "node-red": {
+    "ui": {
+      "host": "127.0.0.1",
+      "port": 1883
+    },
+    "flowFilename": "Agilan_flows.json",
+    "userDir": "/Users/agilan/Documents/node-red",
+    "paletteCategoriesOrder": [
+      "custom nodes",
+      "subflows",
+      "input",
+      "output",
+      "function",
+      "social",
+      "mobile",
+      "storage",
+      "analysis",
+      "advanced"
+    ]
+  }
+}
